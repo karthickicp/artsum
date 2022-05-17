@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artsum</title>
-    <link rel="shortcut icon" type="image/jpg" href="assets/img/logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/logo.png" />
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -45,7 +45,10 @@
                     <li><a href="#">BUY</a></li>
                 </ul>
                 <div class="user-profile">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                      </div>
                 </div>
             </div>
         </div>
@@ -57,11 +60,12 @@
                 <img src="assets/img/logo.png" alt="logo" />
             </a>
             <div>
-                <i class="fa-solid fa-circle-user"></i>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="user-profile">
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <section id="myDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                      </section>
+                </div>
             </div>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -93,8 +97,8 @@
     <div class="body-section">
         <div class="user-upload-wrapper">
             <div class="container">
-    
-                <div class="col-12 col-md-10 col-lg-8">
+
+                <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="fileupload.html">Home</a></li>
@@ -107,11 +111,12 @@
                         <!-- <i class="fa-solid fa-circle-user"></i> -->
                         <form>
                             <div class="row">
-                                <div class="col-12 col-md-6 b-2">
+                                <div class="col-12 b-2">
                                     <label for="artistName" class="form-label">Artist Name</label>
-                                    <input type="text" class="form-control" id="artistName" placeholder="Name" required/>
+                                    <input type="text" class="form-control" id="artistName" placeholder="Name"
+                                        required />
                                 </div>
-                                <div class="col-12 col-md-6 mb-2">
+                                <div class="col-12 mb-2">
                                     <label for="category" class="form-label">Select Category</label>
                                     <select class="form-select" aria-label="Default select example" required>
                                         <option selected>Open this select menu</option>
@@ -122,24 +127,25 @@
                                         <option value="others">Others</option>s
                                     </select>
                                 </div>
-        
-                                <div class="col-12 col-md-6 mb-2">
+
+                                <div class="col-12 mb-2">
                                     <label for="medium" class="form-label">Medium</label>
-                                    <input type="text" class="form-control" id="medium" placeholder="Medium" required/>
+                                    <input type="text" class="form-control" id="medium" placeholder="Medium" required />
                                 </div>
-                                <div class="col-12 col-md-6 mb-2">
+                                <div class="col-12 mb-2">
                                     <label for="size" class="form-label">Size</label>
-                                    <input type="text" class="form-control" id="size" placeholder="Size" required/>
+                                    <input type="text" class="form-control" id="size" placeholder="Size" required />
                                 </div>
                             </div>
-                            
+
                             <div class="col-12 mb-2">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control" id="description" rows="3"
-                                    placeholder="Describe..." required></textarea>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Describe..."
+                                    required></textarea>
                             </div>
                             <div class="image-upload-wrap">
-                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" required/>
+                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*"
+                                    required />
                                 <div class="drag-text">
                                     <i class="fa-solid fa-cloud-arrow-up"></i>
                                     <p>Drag and drop a file or select add Image</p>
@@ -147,22 +153,25 @@
                             </div>
                             <div class="file-upload-content mt-3">
                                 <!-- <a href="#" class="file-upload-link"> -->
-                                    <img class="file-upload-image" id="uploaded-img" src="#" alt="your image" onclick="swipe()"/>
+                                <img class="file-upload-image" id="uploaded-img" src="#" alt="your image"
+                                    onclick="swipe()" />
                                 <!-- </a> -->
-                                    <i class="fa-solid fa-trash remove-file-btn" onclick="removeUpload()"></i>
-                                    
+                                <i class="fa-solid fa-trash remove-file-btn" onclick="removeUpload()"></i>
+
                             </div>
-                        <button class="Btn Btn-primary" type="submit">Submit</button>
+                            <button class="Btn Btn-primary" type="submit">Submit</button>
 
                         </form>
                     </div>
                 </div>
-    
+
                 <img src="assets/img/upload-bg.jpg" alt="upload-bg" class="background">
+
+
             </div>
         </div>
     </div>
-    
+
     <!-- footer -->
     <footer>
         <div class="container">
@@ -180,7 +189,7 @@
             <p class="copyright">kidsplace@copyright 2022</p>
         </div>
     </footer>
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

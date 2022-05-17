@@ -43,7 +43,10 @@
                     <li><a href="#">BUY</a></li>
                 </ul>
                 <div class="user-profile">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <div id="mobileDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                      </div>
                 </div>
             </div>
         </div>
@@ -55,7 +58,12 @@
                 <img src="assets/img/logo.png" alt="logo" />
             </a>
             <div>
-                <i class="fa-solid fa-circle-user"></i>
+                <div class="user-profile">
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <section id="myDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                      </section>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -267,7 +275,6 @@
             <p class="copyright">kidsplace@copyright 2022</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.jqZoom.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/script.js"></script>

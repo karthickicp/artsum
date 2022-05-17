@@ -77,8 +77,8 @@ $(".multiple-items").slick({
       breakpoint: 480,
       settings: {
         arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       },
     },
   ],
@@ -99,3 +99,23 @@ function swipe() {
   var url = imgPath.getAttribute("src");
   window.open(url, "_blank");
 }
+// dropdown
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("mobileDropdown").classList.toggle("show");
+  console.log("drop down triggered");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};

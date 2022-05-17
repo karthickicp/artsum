@@ -26,27 +26,30 @@ header ul li a:hover{color: var(--primary);}
 header .nav-menu {display: flex;align-items: center;}
 header .nav-menu div{margin-left: 1rem;}
 .nav-menu i{font-size: 2rem; color: var(--secondary);cursor: pointer;}
-.nav-menu i:hover{color: var(--primary);}
+.nav-menu .fa-circle-user:hover{color: var(--primary);}
+.nav-menu .fa-arrow-right-from-bracket{color: var(--textPrimary);font-size: 1rem;}
+.user-profile{position: relative;}
 /* mobile header */
 .mob-header{position: fixed; width: 100%; float: left; top: 0; background: #fff !important;z-index: 1;}
 .mob-header div{display: flex; align-items: center;}
 .mob-header img{max-width: 50px;} 
 .mob-header a{font-weight: 500;color: var(--textPrimary);}
 .mob-header a.active{color: var(--secondary);}
-.mob-header .fa-circle-user{font-size: 1.5rem; color: var(--secondary); margin-right: 1rem;}
+.mob-header .fa-circle-user{font-size: 1.5rem; color: var(--secondary); margin-right: .5rem; cursor: pointer;}
+.mob-header .dropdown-content{top: 24px;}
 .navbar-toggler{border: none; padding: 0;}
 .navbar-toggler i{color: var(--textPrimary); font-size: 1.75rem;}
 .navbar-toggler:focus{box-shadow: none;}
 /* body section */
 /* user upload wrapper */
 .body-section{width: 100%; float: left; min-height: calc(100vh - 80px); margin-top: 80px; position: relative;}
-.user-upload-wrapper .background{ height: 100%; width: 40vw; position: absolute; top: 0; right: 0; z-index: -1;}
+.user-upload-wrapper .background{ height: 100%; width: 38vw; position: absolute; top: 0; right: 0; z-index: -1;}
 .user-upload-wrapper .container{display: flex; align-items: center;}
 .user-upload-wrapper .card{box-shadow:  0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);margin-bottom: 3rem; border: none;}
 .user-upload-wrapper input::placeholder{font-size: .875rem;}
 .user-upload-wrapper form label{ font-size: .875rem;}
 .user-upload-wrapper textarea{resize: none;}
-.user-upload-wrapper button {margin: 1rem auto 0 auto}
+.user-upload-wrapper button {margin-top: 1rem; display: flex; justify-content: center;}
 /* file upload */
 
 .file-upload {background-color: #ffffff;width: 600px;margin: 0 auto;padding: 20px;}
@@ -69,6 +72,7 @@ footer{padding: 1rem 0; background: var(--bgDark); width: 100%; float: left;}
 .social-media{display: flex;justify-content: center; margin-bottom: .5rem;}
 .social-media div{width: 2rem; height: 2rem; border-radius: 50%; background: var(--primary); padding: 10px; display: flex;
     align-items: center; justify-content: center;margin-right: 1rem; cursor: pointer;}
+.social-media div:hover{ background: var(--secondary);}
 .social-media i{font-size: 1rem; color: #fff;}
 footer .copyright{font-size: 1rem; color: #fff; text-align: center;margin-bottom: 0;font-weight: 300;}
 .navbar-toggler{padding: .25rem .5rem}
@@ -119,15 +123,23 @@ footer .copyright{font-size: 1rem; color: #fff; text-align: center;margin-bottom
     display: none;cursor: crosshair;}
 .zoom-box .viewer-box{position: absolute;border: 1px solid rgb(239,237,240);display: none;overflow: hidden; width: 100% !important; height: 100% !important; z-index: 1;}
 .zoom-box .viewer-box>img{position: absolute;left: 0;top: 0;}
+/* dropdown */
+.dropdown { position: relative; display: inline-block;}
+.dropdown-content {display: none;position: absolute;right: 0;margin-top: .5rem;background-color: #fff;overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+.dropdown-content a {color: black;padding: 12px 16px; text-decoration: none;display: flex; align-items: center;}
+.dropdown-content a:hover, .dropdown-content a:hover i{color: var(--secondary);}
+  .show {display: flex;}
 /* responsive */
 @media (max-width: 767px) {
     .body-section{margin-top: 66px;}
     .body-section .background{width: 100vw;}
     .user-upload-wrapper a{color: #fff;}
     .product-desc h1{margin: 1rem 0;}
-    .breadcrumb-item + .breadcrumb-item::before{color: #fff;}
+    /* .breadcrumb-item + .breadcrumb-item::before{color: #fff;} */
+    .slick-slide{margin: 0 5px;}
+    .related-items .card h1{margin:0 0 0.5rem 0;}
 }
 @media (min-width: 768px) and (max-width: 991px) {
     header ul li {margin-right: 1rem;}
-
 }
