@@ -94,7 +94,7 @@
         <div class="user-upload-wrapper">
             <div class="container">
     
-                <div class="col-12 col-md-8 col-lg-6">
+                <div class="col-12 col-md-10 col-lg-8">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="fileupload.html">Home</a></li>
@@ -105,31 +105,34 @@
                     </nav>
                     <div class="card p-4">
                         <!-- <i class="fa-solid fa-circle-user"></i> -->
-                        <form action="" >
-                            <div class="col-12 mb-2">
-                                <label for="artistName" class="form-label">Artist Name</label>
-                                <input type="text" class="form-control" id="artistName" placeholder="Name" required/>
+                        <form>
+                            <div class="row">
+                                <div class="col-12 col-md-6 b-2">
+                                    <label for="artistName" class="form-label">Artist Name</label>
+                                    <input type="text" class="form-control" id="artistName" placeholder="Name" required/>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <label for="category" class="form-label">Select Category</label>
+                                    <select class="form-select" aria-label="Default select example" required>
+                                        <option selected>Open this select menu</option>
+                                        <option value="drawing" selected>Drawing</option>
+                                        <option value="painting">Painting</option>
+                                        <option value="singing">Singing</option>
+                                        <option value="dance">Dance</option>
+                                        <option value="others">Others</option>s
+                                    </select>
+                                </div>
+        
+                                <div class="col-12 col-md-6 mb-2">
+                                    <label for="medium" class="form-label">Medium</label>
+                                    <input type="text" class="form-control" id="medium" placeholder="Medium" required/>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <label for="size" class="form-label">Size</label>
+                                    <input type="text" class="form-control" id="size" placeholder="Size" required/>
+                                </div>
                             </div>
-                            <div class="col-12 mb-2">
-                                <label for="category" class="form-label">Select Category</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="drawing" selected>Drawing</option>
-                                    <option value="painting">Painting</option>
-                                    <option value="singing">Singing</option>
-                                    <option value="dance">Dance</option>
-                                    <option value="others">Others</option>
-                                </select>
-                            </div>
-    
-                            <div class="col-12 mb-2">
-                                <label for="medium" class="form-label">Medium</label>
-                                <input type="text" class="form-control" id="medium" placeholder="Medium" required/>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <label for="size" class="form-label">Size</label>
-                                <input type="text" class="form-control" id="size" placeholder="Size" required/>
-                            </div>
+                            
                             <div class="col-12 mb-2">
                                 <label for="description" class="form-label">Description</label>
                                 <textarea class="form-control" id="description" rows="3"
@@ -149,8 +152,9 @@
                                     <i class="fa-solid fa-trash remove-file-btn" onclick="removeUpload()"></i>
                                     
                             </div>
-                        </form>
                         <button class="Btn Btn-primary" type="submit">Submit</button>
+
+                        </form>
                     </div>
                 </div>
     
