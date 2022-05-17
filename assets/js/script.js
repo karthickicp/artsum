@@ -103,7 +103,6 @@ function swipe() {
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
   document.getElementById("mobileDropdown").classList.toggle("show");
-  console.log("drop down triggered");
 }
 
 // Close the dropdown if the user clicks outside of it
