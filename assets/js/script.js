@@ -118,3 +118,40 @@ window.onclick = function (event) {
     }
   }
 };
+// increment decrement
+// Select increment and decrement buttons
+const incrementCount = document.getElementById("increment-count");
+const decrementCount = document.getElementById("decrement-count");
+
+// Select total count
+const totalCount = document.getElementById("total-count");
+const totalCountlg = document.getElementById("total-count-lg");
+// Variable to track count
+var count = 0;
+let countlg = 0;
+// Display initial count value
+totalCount.innerHTML = count;
+totalCountlg.innerHTML = countlg;
+// Function to increment count
+const handleIncrement = () => {
+  count++;
+  countlg++;
+  totalCount.innerHTML = count;
+  totalCountlg.innerHTML = countlg;
+};
+
+// Function to decrement count
+const handleDecrement = () => {
+  if (count === 0) {
+    return false;
+  } else {
+    count--;
+    countlg--;
+  }
+  totalCount.innerHTML = count;
+  totalCountlg.innerHTML = countlg;
+};
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);

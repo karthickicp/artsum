@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artsum</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/logo.png" />
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/logo.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/jquery.jqZoom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="d-none d-md-flex">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/img/logo.png" alt="logo" />
+                </a>
+            </div>
+            <!-- menusection -->
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#">Painting</a></li>
+                    <li><a href="#">Drawing</a></li>
+                    <li><a href="#">Singing</a></li>
+                    <li><a href="#">Dance</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li><a href="#">BUY</a></li>
+                </ul>
+                <div class="user-profile">
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mob header -->
+    <nav class="navbar navbar-expand-lg bg-light d-block d-md-none mob-header">
+        <div class="container-fluid">
+            <a href="#">
+                <img src="assets/img/logo.png" alt="logo" />
+            </a>
+            <div>
+                <div class="user-profile">
+                    <i class="fa-solid fa-circle-user dropbtn" onclick="myFunction()"></i>
+                    <section id="myDropdown" class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-3"></i>Logout</a>
+                    </section>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Painting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drawing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Singing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Others</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BUY</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- body section -->
+    <div class="body-section">
+        <div class="cart-section">
+            <div class="container">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="card p-3">
+                                <h1>My Cart</h1>
+                                <div class="cart-items">
+                                    <i class="fa-solid fa-xmark"></i>
+                                    <img src="assets/img/cart-item.webp" alt="cart-item">
+                                    <div class="desc">
+                                        <h3>Sea View Painting</h3>
+                                        <p>$ 250</p>
+                                        <div class="add-items mob d-flex d-md-none mt-2 ">
+                                            <div id="decrement-count">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+                                            <div id="total-count">
+                                            </div>
+                                            <div id="increment-count">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-items d-none d-md-flex">
+                                        <div id="decrement-count">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div id="total-count-lg">
+                                        </div>
+                                        <div id="increment-count">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-items">
+                                    <i class="fa-solid fa-xmark"></i>
+                                    <img src="assets/img/cart-item.webp" alt="cart-item">
+                                    <div class="desc">
+                                        <h3>Sea View Painting</h3>
+                                        <p>$ 250</p>
+                                        <div class="add-items mob d-flex d-md-none mt-2 ">
+                                            <div id="decrement-count">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+                                            <div id="total-count">
+                                            </div>
+                                            <div id="increment-count">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-items d-none d-md-flex">
+                                        <div id="decrement-count">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div id="total-count">
+                                        </div>
+                                        <div id="increment-count">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-items">
+                                    <i class="fa-solid fa-xmark"></i>
+                                    <img src="assets/img/cart-item.webp" alt="cart-item">
+                                    <div class="desc">
+                                        <h3>Sea View Painting</h3>
+                                        <p>$ 250</p>
+                                        <div class="add-items mob d-flex d-md-none mt-2 ">
+                                            <div id="decrement-count">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+                                            <div id="total-count">
+                                            </div>
+                                            <div id="increment-count">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-items d-none d-md-flex">
+                                        <div id="decrement-count">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div id="total-count">
+                                        </div>
+                                        <div id="increment-count">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="item-section">
+                                <div class="card p-3">
+                                    <h1>Total Order</h1>
+                                    <table class="table">
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>$ 100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 2</td>
+                                            <td>$ 50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 3</td>
+                                            <td>$ 150</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total</th>
+                                            <th>$ 300</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <p class="copyright">kidsplace@copyright 2022</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.jqZoom.js"></script>
+    <script src="assets/js/jquery.c-share.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+</body>
+
+</html>
