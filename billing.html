@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 </head>
 
 <body>
@@ -97,7 +98,7 @@
                     <div class="col-lg-7 col-xl-8">
                         <div class="card p-3">
                             <h1>Billing Address</h1>
-                            <form>
+                            <form >
                                 <div class="row">
                                     <h4>Personal Details</h4>
                                     <div class="col-12 col-md-6 mb-2">
@@ -157,24 +158,25 @@
                         <div class="item-section">
                             <div class="card p-3">
                                 <h1>Total Order</h1>
-                                <table class="table">
+                                <table class="table" id="cartItemTable">
                                     <tr>
-                                        <td>Item 1</td>
-                                        <td>$ 100</td>
+                                        <td>Sea View Painting</td>
+                                        <td>$ 250</td>
                                     </tr>
                                     <tr>
-                                        <td>Item 2</td>
-                                        <td>$ 50</td>
+                                        <td>Sea View Painting</td>
+                                        <td>$ 250</td>
                                     </tr>
                                     <tr>
-                                        <td>Item 3</td>
-                                        <td>$ 150</td>
+                                        <td>Sea View Painting</td>
+                                        <td>$ 250</td>
                                     </tr>
                                     <tr>
                                         <th>Total</th>
-                                        <th>$ 300</th>
+                                        <th class="total-price">$ 300</th>
                                     </tr>
                                 </table>
+                                <button class="Btn Btn-primary mt-2" id="success"><i class="fa-solid fa-cart-shopping me-2"></i>Proceed To Checkout</button>
                             </div>
                         </div>
                     </div>
@@ -200,16 +202,29 @@
             <p class="copyright">kidsplace@copyright 2022</p>
         </div>
     </footer>
+    <!-- modal -->
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/jquery.jqZoom.js"></script>
     <script src="assets/js/jquery.c-share.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+<script>
+    	$(document).on('click', '#success', function(e) {
+			swal(
+				'Success',
+				'Order Placed Successfully',
+				'success'
+                
+			)
+		});
+</script>
 </body>
 
 </html>

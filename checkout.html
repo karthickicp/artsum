@@ -98,86 +98,63 @@
                             <div class="card p-3">
                                 <h1>My Cart</h1>
                                 <div class="cart-items">
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i class="fa-solid fa-xmark" onclick="removeItemFromCart()"></i>
                                     <img src="assets/img/cart-item.webp" alt="cart-item">
                                     <div class="desc">
-                                        <h3>Sea View Painting</h3>
-                                        <p>$ 250</p>
-                                        <div class="add-items mob d-flex d-md-none mt-2 ">
-                                            <div id="decrement-count">
+                                        <div class="w-100">
+                                            <h3>Sea View Painting</h3>
+                                            <p>$ 250</p>
+                                        </div>
+                                        <div class="add-items">
+                                            <div class="decrement-count">
                                                 <i class="fa-solid fa-minus"></i>
                                             </div>
-                                            <div id="total-count">
+                                            <div class="total-count">1
                                             </div>
-                                            <div id="increment-count">
+                                            <div class="increment-count">
                                                 <i class="fa-solid fa-plus"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="add-items d-none d-md-flex">
-                                        <div id="decrement-count">
-                                            <i class="fa-solid fa-minus"></i>
+                                   
+                                </div>
+                                <div class="cart-items">
+                                    <i class="fa-solid fa-xmark" onclick="removeItemFromCart()"></i>
+                                    <img src="assets/img/cart-item.webp" alt="cart-item">
+                                    <div class="desc">
+                                        <div class="w-100">
+                                            <h3>Sea View Painting</h3>
+                                            <p>$ 250</p>
                                         </div>
-                                        <div id="total-count-lg">
-                                        </div>
-                                        <div id="increment-count">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <div class="add-items">
+                                            <div class="decrement-count">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+                                            <div class="total-count">1
+                                            </div>
+                                            <div class="increment-count">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cart-items">
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i class="fa-solid fa-xmark" onclick="removeItemFromCart()"></i>
                                     <img src="assets/img/cart-item.webp" alt="cart-item">
                                     <div class="desc">
-                                        <h3>Sea View Painting</h3>
-                                        <p>$ 250</p>
-                                        <div class="add-items mob d-flex d-md-none mt-2 ">
-                                            <div id="decrement-count">
+                                        <div class="w-100">
+                                            <h3>Sea View Painting</h3>
+                                            <p>$ 250</p>
+                                        </div>
+                                        <div class="add-items">
+                                            <div class="decrement-count">
                                                 <i class="fa-solid fa-minus"></i>
                                             </div>
-                                            <div id="total-count">
+                                            <div class="total-count">1
                                             </div>
-                                            <div id="increment-count">
+                                            <div class="increment-count">
                                                 <i class="fa-solid fa-plus"></i>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="add-items d-none d-md-flex">
-                                        <div id="decrement-count">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </div>
-                                        <div id="total-count">
-                                        </div>
-                                        <div id="increment-count">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-items">
-                                    <i class="fa-solid fa-xmark"></i>
-                                    <img src="assets/img/cart-item.webp" alt="cart-item">
-                                    <div class="desc">
-                                        <h3>Sea View Painting</h3>
-                                        <p>$ 250</p>
-                                        <div class="add-items mob d-flex d-md-none mt-2 ">
-                                            <div id="decrement-count">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div id="total-count">
-                                            </div>
-                                            <div id="increment-count">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="add-items d-none d-md-flex">
-                                        <div id="decrement-count">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </div>
-                                        <div id="total-count">
-                                        </div>
-                                        <div id="increment-count">
-                                            <i class="fa-solid fa-plus"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -187,30 +164,32 @@
                             <div class="item-section">
                                 <div class="card p-3">
                                     <h1>Total Order</h1>
-                                    <table class="table">
+                                    <table class="table" id="cartItemTable">
                                         <tr>
-                                            <td>Item 1</td>
-                                            <td>$ 100</td>
+                                            <td>Sea View Painting</td>
+                                            <td>$ 250</td>
                                         </tr>
                                         <tr>
-                                            <td>Item 2</td>
-                                            <td>$ 50</td>
+                                            <td>Sea View Painting</td>
+                                            <td>$ 250</td>
                                         </tr>
                                         <tr>
-                                            <td>Item 3</td>
-                                            <td>$ 150</td>
+                                            <td>Sea View Painting</td>
+                                            <td>$ 250</td>
                                         </tr>
                                         <tr>
                                             <th>Total</th>
-                                            <th>$ 300</th>
+                                            <th class="total-price">$ 300</th>
                                         </tr>
                                     </table>
+                                    <button class="Btn Btn-primary mt-2"><i
+                                            class="fa-solid fa-cart-shopping me-2"></i>Proceed To Checkout</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -241,7 +220,6 @@
     <script src="assets/js/jquery.jqZoom.js"></script>
     <script src="assets/js/jquery.c-share.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-
 </body>
 
 </html>

@@ -118,40 +118,66 @@ window.onclick = function (event) {
     }
   }
 };
+
 // increment decrement
 // Select increment and decrement buttons
-const incrementCount = document.getElementById("increment-count");
-const decrementCount = document.getElementById("decrement-count");
-
-// Select total count
-const totalCount = document.getElementById("total-count");
-const totalCountlg = document.getElementById("total-count-lg");
-// Variable to track count
-var count = 0;
-let countlg = 0;
-// Display initial count value
-totalCount.innerHTML = count;
-totalCountlg.innerHTML = countlg;
-// Function to increment count
-const handleIncrement = () => {
-  count++;
-  countlg++;
-  totalCount.innerHTML = count;
-  totalCountlg.innerHTML = countlg;
-};
-
-// Function to decrement count
-const handleDecrement = () => {
-  if (count === 0) {
-    return false;
-  } else {
-    count--;
-    countlg--;
+const incrementCount = document.getElementsByClassName("increment-count");
+const decrementCount = document.getElementsByClassName("decrement-count");
+for (i = 0; i < incrementCount.length; i++) {
+  var incrementBtn = incrementCount[i];
+  incrementBtn.addEventListener("click", (e) => {
+    let btnClicked = e.target;
+    let parent = btnClicked.parentElement.parentElement.children[1];
+    let count = parseInt(parent.innerHTML);
+    count++;
+    parent.innerHTML = count;
+    updateCartTotal();
+  });
+}
+for (i = 0; i < decrementCount.length; i++) {
+  var incrementBtn = decrementCount[i];
+  incrementBtn.addEventListener("click", (e) => {
+    let btnClicked = e.target;
+    let parent = btnClicked.parentElement.parentElement.children[1];
+    let count = parseInt(parent.innerHTML);
+    if (count === 1) {
+      return false;
+    } else {
+      count--;
+    }
+    parent.innerHTML = count;
+    updateCartTotal();
+  });
+}
+// handle Close
+const removeItemFromCart = () => {
+  const closeIcons = document.getElementsByClassName("fa-xmark");
+  for (let i = 0; i < closeIcons.length; i++) {
+    const closeIcon = closeIcons[i];
+    closeIcon.addEventListener("click", (e) => {
+      let buttonClicked = e.target;
+      buttonClicked.parentElement.remove();
+      updateCartTotal();
+    });
   }
-  totalCount.innerHTML = count;
-  totalCountlg.innerHTML = countlg;
 };
-
-// Add click event to buttons
-incrementCount.addEventListener("click", handleIncrement);
-decrementCount.addEventListener("click", handleDecrement);
+const updateCartTotal = () => {
+  const closeIcons = document.getElementsByClassName("fa-xmark");
+  let totalPrice = document.querySelectorAll(".total-price");
+  let cartItemContainer = document.getElementsByClassName("cart-items");
+  let total = 0;
+  for (i = 0; i < cartItemContainer.length; i++) {
+    let cartItem = cartItemContainer[i];
+    let price = parseFloat(
+      cartItem.querySelector("p").innerText.replace("$", "")
+    );
+    let quantity = cartItem.getElementsByClassName("total-count")[0].innerHTML;
+    total = total + price * quantity;
+    totalPrice[0].innerHTML = `$ ${total}`;
+  }
+  if (closeIcons.length === 0) {
+    totalPrice[0].innerHTML = "$ 0";
+  }
+  return total;
+};
+updateCartTotal();
