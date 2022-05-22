@@ -151,11 +151,11 @@ footer .copyright{font-size: 1rem; color: #fff; text-align: center;margin-bottom
 .cart-items .add-items i{cursor: pointer;}
 .cart-items .add-items #total-count{font-size: 1rem;margin: 0 1rem;}
 /* item section */
-.item-section .table > :not(caption) > * > *{border-bottom-width: 0;}
+/* .item-section .table > :not(caption) > * > *{border-bottom-width: 0;} */
 .item-section table{margin-bottom: 0; margin-top: .5rem;}
 .item-section table tr td:nth-last-child(1){text-align: right;}
 .item-section table tr th:nth-last-child(1){text-align: right;}
-.item-section table tr:nth-last-child(2) td{border-bottom-width: 1px;}
+.item-section table tr:nth-last-child(1) th{border-bottom-width: 0;}
 
 /* responsive */
 @media (max-width: 767px) {
