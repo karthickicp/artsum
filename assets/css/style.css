@@ -14,6 +14,7 @@ body{width: 100%; float: left; font-family: 'Poppins', sans-serif}
 .breadcrumb-item + .breadcrumb-item::before {color: var(--textPrimary); content: var(--bs-breadcrumb-divider, ">");}
 .Btn{padding: .5rem 2rem; background: var(--primary); color: #fff;font-weight: 500;border-radius: .25rem;
      border: 1px solid; border-color: var(--primary); }
+a:focus{outline: none;}
 /* header */
 .logo img{max-width: 80px;}
 header{box-shadow: 0 4px 7px -1px rgba(0, 0, 0, 0.25); position: fixed; top: 0; width: 100%;background: #fff;
